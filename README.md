@@ -62,9 +62,9 @@ Clone this git to get started.
 
 This section should list any major frameworks/libraries used to built this oz website
 
-* [![HTML5][html]][Next-url]
-* [![CSS3][css]][React-url]
-* [![JavaScript][javascript]][Vue-url]
+* HTML5
+* CSS3
+* JavaScript
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
