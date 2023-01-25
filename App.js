@@ -313,6 +313,8 @@ const artist=[
         quote:"You are the shadow to my light did you feel us another start you fade </br> Away seen afraid our aim is out of sight wanna see us Alive",
     },
 ]
+
+// fill the popular song bar inside the song side section
 let menuSong=document.querySelector('.menu-song');
 let popularSongs=document.querySelector('.pop-song');
 let tempMainSong="";
@@ -347,6 +349,9 @@ song.forEach((value,idx)=>{
         popularSongs.innerHTML+=item;
     }
 })
+//end of fill popular song bar
+
+// filling the popular artist dynamically
 let artistContent=document.getElementsByClassName('content')[0];
 let artistItem=document.getElementsByClassName('item')[0];
 artist.forEach((value)=>{
@@ -357,6 +362,9 @@ artist.forEach((value)=>{
     `;
     artistItem.innerHTML+=item;
 })
+// end of fill the popular artist dynamically
+
+// for access the popular artist song
 document.addEventListener("click", function(e){
     // (https://stackoverflow.com/questions/34896106/attach-event-to-dynamic-elements-in-javascript)
     const target = e.target.closest(`.artist-list`); // Or any other selector.
@@ -393,6 +401,8 @@ document.addEventListener("click", function(e){
       document.body.scroll = "no"; // ie only
     }
 });
+// end of access of popular artist 
+
 let makeAllBackground=()=>{
     Array.from(document.getElementsByClassName('cover2')).forEach((e)=>{
         e.style.background='rgb(105,105,170,.4)';
@@ -455,14 +465,16 @@ input.addEventListener('keyup',()=>{
 })
 
 // search data end
+let masterPlay=document.getElementById('masterPlay');
 let src="";
 let poster_master_play=document.getElementById('poster-master-play');
 let playBox=document.getElementsByClassName('master-play')[0];
 let title=document.getElementById('title');
 let musicCurrentTime=0;
-let targetByMasterPlay="";
+let targetByMasterPlay=document.getElementsByClassName(`playListPlay`)[0];
 let width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
 let songArtist=document.getElementsByClassName('popular-artist')[0];
+let wave=document.getElementById('wave');
 if(width<=400)
 {
     playBox.style.display="none";
@@ -500,7 +512,7 @@ function musicPlayer(target){
         //console.log(index);
       }
       let downloadMusic=document.getElementById('download-music');
-      console.log(index)
+      //console.log(index)
       downloadMusic.href=`audio/${index}.mp3`;
       downloadMusic.setAttribute('download',`${title1}`);
       makeAllPlay();
@@ -564,6 +576,7 @@ document.addEventListener("click", function(e){
     // (https://stackoverflow.com/questions/34896106/attach-event-to-dynamic-elements-in-javascript)
     const target = e.target.closest(`.playListPlay`); // Or any other selector.
     if(target){
+      console.log(target);
       targetByMasterPlay=target;
       musicPlayer(targetByMasterPlay);
     }
@@ -578,8 +591,9 @@ function chRemove(){
 // play from menu side
 masterPlay.addEventListener('click',playing);
 function playing(){
-    let wave=document.getElementById('wave');
+    console.log('hello');
     makeAllPlay();
+    let index=targetByMasterPlay.getAttribute('id');
     if(music.paused || music.currentTime<=0){
         //alert("up"+music.currentTime);
         music.play();
@@ -605,6 +619,10 @@ function playing(){
         masterPlay.classList.add('bi-play-fill');
         chRemove();
     }
+    makeAllBackground();
+      Array.from(document.getElementsByClassName('songItem'))[index-1].style.background="rgba(54, 226, 236,0.6)";
+      document.documentElement.style.overflow = 'hidden';  // firefox, chrome
+      document.body.scroll = "no"; // ie only
 }
 
 let currentStart=document.getElementById('current-start');
