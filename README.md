@@ -78,7 +78,7 @@ Just `clone` it in your ide and it's ready to run
 
 
 <!-- CONTACT -->
-## Contact
+## Connect
 
 Project Link: [https://spotify-clone-rudra.netlify.app/](https://spotify-clone-rudra.netlify.app/)
 
@@ -93,7 +93,7 @@ Demo of project: [https://spotify-clone-rudra.netlify.app/](https://spotify-clon
 Firstly, I would like to thank Youtube for all the help and writing the base of project.
 Secondly, I have downloaded music from Deezer website and right on the content goes to their respective owners.
 And last but not the least, thanks to w3 schools, geeksforgeek. 
-* [Youtube]
+* [Youtube](https://www.youtube.com)
 * [Deezer](https://www.deezer.com)
 * [TEDDY6969](https://github.com/TEDDY6969/)
 
