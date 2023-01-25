@@ -40,8 +40,9 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
-[![Product Name Screen Shot][product-screenshot]](https://media.discordapp.net/attachments/895299400488849458/1026784121080528976/Screenshot_2022-10-04-14-42-22-91.png)
+<a href="https://spotify-clone-rudra.netlify.app/">
+<img src="https://github.com/TheNewC0der-24/Music-Website/blob/master/Media/Image/MuSiC-logo.png" alt="Logo">
+</a>
 
 There are many websites on GitHub claiming to be the best in music webplayer catagory but one can't find any of them to be working as fine as this [music-website](https://spotify-clone-rudra.netlify.app/).
 
