@@ -1,3 +1,4 @@
+/*========================This code for API Call=============================*/
 /*
 let BASE_URL=`https://shazam-core.p.rapidapi.com`;
 let queryOfMenuSide=`/v1/charts/world`;
@@ -59,6 +60,8 @@ function songMenuSideProcess(data){
         menuSong.innerHTML+=item;
     })
 }
+/*====================End the code of API Call======================*/
+/*================This code for Manually process the song================*/
 // popular song process
 function popularSongProcess(data){
    console.log(data);
